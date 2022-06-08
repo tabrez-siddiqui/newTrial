@@ -1,4 +1,5 @@
 steps:
+  name:'macytest'
   artifacts:
    objects:
     location: 'gs://macytest/'

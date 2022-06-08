@@ -1,5 +1,5 @@
 steps:
-  artifacts:'macytest'
+  artifacts:
    objects:
     location: 'gs://macytest/'
     paths: '/workspace'

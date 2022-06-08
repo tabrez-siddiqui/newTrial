@@ -1,20 +1,7 @@
 steps:
-# Download DBT Image
-  - name: 'gcr.io/poc-dna-automation-693335/gcr_demo_pract1'
-    id: 'Download DBT Image'
-    args: ["dbt", "--version"] 
-
-# DEV - DBT DEBUG
-  - name: "gcr.io/poc-dna-automation-693335/gcr_demo_pract1" 
-    id: 'DEV - DBT DEBUG'
-    args: ['dbt', 'debug',"--project-dir","/workspace", "--profiles-dir","/workspace"]
-
-# DEV - DBT RUN
-  - name: "gcr.io/poc-dna-automation-693335/gcr_demo_pract1" 
-    id: 'DEV - DBT RUN'
-    args: ['dbt', 'run',"--project-dir","/workspace", "--profiles-dir","/workspace"]
-    
-# Logging
-options:
-  logging: CLOUD_LOGGING_ONLY
-  #completed
+- name: 'gcr.io/cloud-builders/javac'
+  args: ['HelloWorld.java']
+artifacts:
+  objects:
+    location: 'gs://demo12trial/demo/'
+    paths: ['']

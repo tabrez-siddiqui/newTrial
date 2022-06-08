@@ -5,3 +5,4 @@ artifacts:
   objects:
     location: 'gs://[STORAGE_LOCATION]/'
     paths: ['HelloWorld.java', 'HelloWorld.class', 'cloudbuild.yaml']
+   use the CLOUD_LOGGING_ONLY logging option

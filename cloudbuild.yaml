@@ -3,7 +3,7 @@ steps:
   args: ['HelloWorld.java']
 artifacts:
   objects:
-    location: 'gs://[STORAGE_LOCATION]/'
+    location: 'gs://demo12trial/demo/'
     paths: ['HelloWorld.java', 'HelloWorld.class', 'cloudbuild.yaml']
    # Logging
 options:

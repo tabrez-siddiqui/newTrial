@@ -1,5 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/javac'
+- name: 'gcr.io/poc-dna-automation-693335/helloeveryone'
   args: ['HelloWorld.java']
 artifacts:
   objects:

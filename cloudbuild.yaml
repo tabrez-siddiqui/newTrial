@@ -17,7 +17,7 @@ steps:
     - '-r'
     - 'plugins'
     - 'gs://${demo12trial}/plugins'
-    # Logging
+  # Logging
 options:
   logging: CLOUD_LOGGING_ONLY
   #completed

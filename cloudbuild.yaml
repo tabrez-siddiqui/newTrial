@@ -7,7 +7,7 @@ inputs:
     description: Google credentials
     required: true
   bucket:
-    description: demo12trial
+    description: demo12trial/demo
     required: true
   exclude:
     description: Regex for excluding files/dirs

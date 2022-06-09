@@ -1,22 +1,19 @@
-name: 'Google Cloud Storage Bucket Sync'
-description: 'Sync a Github repository with a Google Cloud Storage (GCS) bucket'
-author: 'PM'
-
-inputs:
-  secrets:
-    description: Google credentials
-    required: true
-  bucket:
-    description: demo12trial/demo
-    required: true
-  exclude:
-    description: Regex for excluding files/dirs
-    required: false
-    default: '.git$'
-
-runs:
-  using: docker
-  image: Dockerfile
-branding:
-  icon: arrow-up
-  color: gray-dark
+steps:
+- name: ubuntu
+  args: ['bash', '-c', "echo '$COMMIT_SHA' > REVISION.txt"]
+- name: gcr.io/cloud-builders/gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'dags'
+    - 'gs://${_GCS_BUCKET}/dags'
+- name: gcr.io/cloud-builders/gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'plugins'
+    - 'gs://${_GCS_BUCKET}/plugins'

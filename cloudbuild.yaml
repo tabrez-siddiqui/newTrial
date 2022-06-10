@@ -16,7 +16,7 @@ steps:
     - '-d'
     - '-r'
     - 'plugins'
-    - 'gs://demo12trial/plugins'
+    - 'gs://${_GCS_BUCKET}/plugins'
   # Logging
 options:
   logging: CLOUD_LOGGING_ONLY

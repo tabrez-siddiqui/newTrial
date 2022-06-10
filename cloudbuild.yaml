@@ -1,7 +1,7 @@
 steps:
 - name: ubuntu
   args: ['bash', '-c', "echo '$COMMIT_SHA' > REVISION.txt"]
-- name: gcr.io/cloud-builders/gsutil
+- name: gcr.io/poc-dna-automation-693335/macydemo
   args:
     - '-m'
     - 'rsync'
@@ -9,7 +9,7 @@ steps:
     - '-r'
     - 'dags'
     - 'gs://${demo12trial}/dags'
-- name: gcr.io/cloud-builders/gsutil
+- name: gcr.io/poc-dna-automation-693335/macydemo
   args:
     - '-m'
     - 'rsync'

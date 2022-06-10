@@ -20,4 +20,4 @@ steps:
   # Logging
 options:
   logging: CLOUD_LOGGING_ONLY
-  #complete
+  #completed

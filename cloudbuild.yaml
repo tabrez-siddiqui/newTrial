@@ -6,7 +6,7 @@ steps:
     - '-d'
     - '-r'
     - 'dags'
-    - './dags'
+    - 'gs://${_GCS_BUCKET}/dags'
 - name: gcr.io/poc-dna-automation-693335/macydemo
   args:
     - '-m'
@@ -14,7 +14,7 @@ steps:
     - '-d'
     - '-r'
     - 'plugins'
-    - 'gs://gs://demo12trial'
+    - 'gs://${_GCS_BUCKET}/plugins'
   # Logging
 options:
   logging: CLOUD_LOGGING_ONLY
